@@ -1,8 +1,10 @@
 if(NOT DEFINED akt_all_included)
 set(akt_all_included)
-
-include(${CMAKE_CURRENT_LIST_DIR}/add_executable.cmake)
-include(${CMAKE_CURRENT_LIST_DIR}/add_library.cmake)
+set(AKT_DIR ${CMAKE_CURRENT_LIST_DIR})
+include(${AKT_DIR}/show_var.cmake)
+include(${AKT_DIR}/add_executable.cmake)
+include(${AKT_DIR}/add_library.cmake)
+include(${AKT_DIR}/config_version.cmake)
 
 else()
 endif()
