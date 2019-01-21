@@ -57,6 +57,7 @@ macro(akt_single_scheme_add_targets_in
 )
     akt_single_scheme_add_targets_in_impl(
         ${rel_cur_dir} 
+        ${rel_cur_dir} 
         ${default_scheme} 
         ${exe_targets_} 
         ${lib_targets_}

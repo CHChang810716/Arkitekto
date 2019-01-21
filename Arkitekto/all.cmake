@@ -7,6 +7,7 @@ include(${AKT_DIR}/add_executable.cmake)
 include(${AKT_DIR}/add_library.cmake)
 include(${AKT_DIR}/config_version.cmake)
 include(${AKT_DIR}/get_rel_subdirs.cmake)
+include(${AKT_DIR}/path_to_target_name.cmake)
 include(${AKT_DIR}/single_scheme_add_targets_in.cmake)
 
 else()
