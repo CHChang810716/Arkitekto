@@ -15,7 +15,7 @@ macro(akt_config_version)
     endif()
     unset(optional_args)
     unset(version_header_path)
-endmacro(akt_add_version)
+endmacro()
 
 
 else()
