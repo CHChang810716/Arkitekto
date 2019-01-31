@@ -1,5 +1,5 @@
-if(NOT DEFINED akt_get_child_srcs_included)
-set(akt_get_child_srcs_included)
+if(NOT DEFINED akt_collect_srcs_and_targets_included)
+set(akt_collect_srcs_and_targets_included)
 
 function(akt_collect_srcs_and_targets res_srcs res_targets abs_dir)
     set(__srcs)
