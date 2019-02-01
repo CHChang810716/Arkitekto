@@ -12,6 +12,7 @@ include(${AKT_DIR}/target_name.cmake)
 # include(${AKT_DIR}/single_scheme_add_targets_in.cmake)
 include(${AKT_DIR}/collect_srcs_and_targets.cmake)
 include(${AKT_DIR}/add_targets_in.cmake)
-
+include(${AKT_DIR}/get_debugger.cmake)
+include(${AKT_DIR}/cmake_package.cmake)
 else()
 endif()

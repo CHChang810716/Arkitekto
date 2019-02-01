@@ -1,0 +1,15 @@
+if(NOT DEFINED akt_cmake_package_included)
+set(akt_cmake_package_included)
+
+macro(akt_cmake_package)
+    include(CMakePackageConfigHelpers)
+    set(AKT_GEN_DIR             "${CMAKE_CURRENT_BINARY_DIR}/generated")
+    set(AKT_CONFIG_INSTALL_DIR  "lib/cmake/${PROJECT_NAME}")
+    set(AKT_CONFIG_VERSION      "${AKT_GEN_DIR}/${PROJECT_NAME}ConfigVersion.cmake")
+    set(AKT_PROJECT_CONFIG      "${AKT_GEN_DIR}/${PROJECT_NAME}Config.cmake")
+    set(AKT_TARGETS_EXPORT      "${PROJECT_NAME}Targets")
+    set(AKT_NAMESPACE           "${PROJECT_NAME}::")
+endmacro()
+
+else()
+endif()

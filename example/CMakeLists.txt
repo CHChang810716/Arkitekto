@@ -10,5 +10,7 @@ include(${CMAKE_CURRENT_LIST_DIR}/../Arkitekto/all.cmake)
 # akt_show_var(result_targets)
 
 akt_add_targets_in(${CMAKE_SOURCE_DIR}/src)
+akt_get_debugger(debugger)
+akt_show_var(debugger)
 # include(cmake/src.cmake)
 #dd include(cmake/install.cmake)
