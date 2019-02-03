@@ -1,0 +1,11 @@
+        {
+            "name": "@__launch_task_name@",
+            "type": "cppvsdbg",
+            "request": "launch",
+            "program": "@CMAKE_INSTALL_PREFIX@/bin/@_launch_task_name@",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "@CMAKE_SOURCE_DIR@/workdir",
+            "environment": [],
+            "externalConsole": true
+        } 
