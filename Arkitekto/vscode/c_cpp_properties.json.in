@@ -1,0 +1,17 @@
+{
+    "configurations": [
+        {
+            "name": "AKT-default",
+            "includePath": [
+                @AKT_VSCODE_C_CPP_INCLUDES@
+            ],
+            "defines": [
+            ],
+            "compilerPath": "@CMAKE_CXX_COMPILER@",
+            "cStandard": "c@CMAKE_C_STANDARD@",
+            "cppStandard": "c++@CMAKE_CXX_STANDARD@",
+            "intelliSenseMode": "@AKT_VSCODE_COMPILER_ID@-x64"
+        }
+    ],
+    "version": 4
+}
