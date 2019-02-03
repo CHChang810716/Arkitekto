@@ -24,6 +24,9 @@ macro(akt_vscode_add_to_launch target)
         __launch_task
     )
     list(APPEND AKT_LAUNCH_TASKS ${__launch_task})
+    file(REMOVE 
+        ${AKT_VSCODE_LAUNCH_TASK_TMP} 
+    )
 endmacro(akt_vscode_add_to_launch )
 
 else()
