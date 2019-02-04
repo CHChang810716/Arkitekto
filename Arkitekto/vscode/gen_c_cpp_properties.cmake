@@ -13,9 +13,11 @@ macro(akt_vscode_gen_c_cpp_properties)
         list(APPEND AKT_VSCODE_C_CPP_INCLUDES "\"${CMAKE_SOURCE_DIR}/test\"")
         if(HUNTER_ENABLED)
             akt_hunter_get_install_root(hunter_install_root)
-            list(APPEND AKT_VSCODE_C_CPP_INCLUDES "\"${hunter_install_root}\"")
+            list(APPEND AKT_VSCODE_C_CPP_INCLUDES "\"${hunter_install_root}/include\"")
         endif()
-        string(REPLACE ";" ",\n" AKT_VSCODE_C_CPP_INCLUDES "${AKT_VSCODE_C_CPP_INCLUDES}")
+        string(REPLACE ";" ",\n                " 
+            AKT_VSCODE_C_CPP_INCLUDES "${AKT_VSCODE_C_CPP_INCLUDES}"
+        )
         if("CMAKE_C_COMPILER_ID" STREQUAL "Clang")
             set(AKT_VSCODE_COMPILER_ID "clang")
         elseif("CMAKE_C_COMPILER_ID" STREQUAL "MSVC")
