@@ -3,6 +3,7 @@ set(akt_vscode_gen_launch_included)
 
 macro(akt_vscode_gen_launch)
     if(NOT EXISTS "${CMAKE_SOURCE_DIR}/.vscode/launch.json")
+        string(REPLACE ";" ",")
         akt_show_var_debug(AKT_LAUNCH_TASKS)
         set(
             __template 
@@ -16,7 +17,7 @@ macro(akt_vscode_gen_launch)
         )
         unset(__template)
         set(__workdir ${CMAKE_SOURCE_DIR}/workdir)
-        akt_show_var(__workdir)
+        akt_show_var_debug(__workdir)
         if(NOT EXISTS "${__workdir}")
             file(MAKE_DIRECTORY ${CMAKE_SOURCE_DIR}/workdir)
         endif()
