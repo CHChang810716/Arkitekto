@@ -3,7 +3,7 @@ set(akt_vscode_gen_launch_included)
 
 macro(akt_vscode_gen_launch)
     if(NOT EXISTS "${CMAKE_SOURCE_DIR}/.vscode/launch.json")
-        string(REPLACE ";" "," tmp AKT_LAUNCH_TASKS)
+        string(REPLACE ";" "," tmp ${AKT_LAUNCH_TASKS})
         set(AKT_LAUNCH_TASKS ${tmp})
         akt_show_var_debug(AKT_LAUNCH_TASKS)
         set(
