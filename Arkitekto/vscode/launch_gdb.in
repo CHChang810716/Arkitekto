@@ -7,7 +7,7 @@
             "stopAtEntry": false,
             "cwd": "@CMAKE_SOURCE_DIR@/workdir",
             "environment": [],
-            "externalConsole": true,
+            "console": "externalTerminal",
             "MIMode": "gdb",
             "miDebuggerPath": "@__debugger@",
             "setupCommands": [

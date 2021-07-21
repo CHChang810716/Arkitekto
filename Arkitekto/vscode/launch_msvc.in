@@ -7,5 +7,5 @@
             "stopAtEntry": false,
             "cwd": "@CMAKE_SOURCE_DIR@/workdir",
             "environment": [],
-            "externalConsole": true
+            "console": "externalTerminal"
         } 
