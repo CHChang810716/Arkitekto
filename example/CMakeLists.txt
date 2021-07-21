@@ -7,5 +7,4 @@ project(AktExample
 include(${CMAKE_CURRENT_LIST_DIR}/../Arkitekto/all.cmake)
 include(cmake/src.cmake)
 include(cmake/install.cmake)
-akt_vscode_gen_launch()
-akt_vscode_gen_c_cpp_properties()
+include(cmake/ide.cmake)

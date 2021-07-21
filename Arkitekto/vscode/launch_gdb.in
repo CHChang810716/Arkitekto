@@ -1,15 +1,15 @@
         {
-            "name": "@__launch_task_name@",
+            "name": "@AKT_TARGET@",
             "type": "cppdbg",
             "request": "launch",
-            "program": "@CMAKE_INSTALL_PREFIX@/bin/@__launch_task_name@",
+            "program": "@CMAKE_INSTALL_PREFIX@/bin/@AKT_TARGET@",
             "args": [],
             "stopAtEntry": false,
             "cwd": "@CMAKE_SOURCE_DIR@/workdir",
             "environment": [],
             "console": "externalTerminal",
             "MIMode": "gdb",
-            "miDebuggerPath": "@__debugger@",
+            "miDebuggerPath": "@AKT_DEBUGGER@",
             "setupCommands": [
                 {
                     "description": "Enable pretty-printing for gdb",
