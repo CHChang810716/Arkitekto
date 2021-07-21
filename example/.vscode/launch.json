@@ -5,21 +5,21 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "my-example",
+            "name": "example-srcBased-hello_world",
             "type": "cppvsdbg",
             "request": "launch",
-            "program": "C:/Program Files (x86)/AktExample/bin/",
+            "program": "C:/git/CHChang810716/CppProjectTemplate/lib/Arkitekto/example/stage/bin/example-srcBased-hello_world",
             "args": [],
             "stopAtEntry": false,
             "cwd": "C:/git/CHChang810716/CppProjectTemplate/lib/Arkitekto/example/workdir",
             "environment": [],
             "externalConsole": true
-        } ,
-        {
-            "name": "my-example2",
+        } 
+,         {
+            "name": "example-srcBased-im_fine_thanku",
             "type": "cppvsdbg",
             "request": "launch",
-            "program": "C:/Program Files (x86)/AktExample/bin/",
+            "program": "C:/git/CHChang810716/CppProjectTemplate/lib/Arkitekto/example/stage/bin/example-srcBased-im_fine_thanku",
             "args": [],
             "stopAtEntry": false,
             "cwd": "C:/git/CHChang810716/CppProjectTemplate/lib/Arkitekto/example/workdir",
