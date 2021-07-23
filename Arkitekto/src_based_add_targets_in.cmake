@@ -52,11 +52,13 @@ macro(akt_src_based_add_targets_in
     if(NOT DEFINED AKT_SRC_ROOT_DIR)
         set(AKT_SRC_ROOT_DIR "${CMAKE_SOURCE_DIR}/src")
     endif()
+    akt_get_debugger(AKT_DEBUGGER)
     akt_src_based_add_targets_in_impl(
         ${dir} 
         "." 
         ${default_scheme} 
     )
+    unset(AKT_DEBUGGER)
 endmacro()
 
 else()

@@ -8,8 +8,6 @@ macro(akt_vscode_add_to_launch target)
     if(NOT AKT_VSCODE_LAUNCH_TMP)
         set(AKT_VSCODE_LAUNCH_TMP ${CMAKE_BINARY_DIR}/akt_vscode_launch_tmp)
     endif()
-    set(AKT_TARGET ${target})
-    akt_get_debugger(AKT_DEBUGGER)
     if(MSVC)
         if(DEFINED AKT_VSCODE_MSVC_TASK_TMPL AND EXISTS "${AKT_VSCODE_MSVC_TASK_TMPL}")
             set(__template "${AKT_VSCODE_MSVC_TASK_TMPL}")
@@ -29,8 +27,6 @@ macro(akt_vscode_add_to_launch target)
         ${__template}
         ${AKT_VSCODE_LAUNCH_TASK_TMP}
     )
-    unset(AKT_TARGET)
-    unset(AKT_DEBUGGER)
     unset(__template)
     file(READ 
         ${AKT_VSCODE_LAUNCH_TASK_TMP} 
