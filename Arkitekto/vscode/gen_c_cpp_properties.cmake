@@ -18,9 +18,10 @@ macro(akt_vscode_gen_c_cpp_properties)
         string(REPLACE ";" ",\n                " 
             AKT_VSCODE_C_CPP_INCLUDES "${AKT_VSCODE_C_CPP_INCLUDES}"
         )
-        if("CMAKE_C_COMPILER_ID" STREQUAL "Clang")
+        akt_show_var_debug(CMAKE_C_COMPILER_ID)
+        if("${CMAKE_C_COMPILER_ID}" STREQUAL "Clang")
             set(AKT_VSCODE_COMPILER_ID "clang")
-        elseif("CMAKE_C_COMPILER_ID" STREQUAL "MSVC")
+        elseif("${CMAKE_C_COMPILER_ID}" STREQUAL "MSVC")
             set(AKT_VSCODE_COMPILER_ID "msvc")
         else()
             set(AKT_VSCODE_COMPILER_ID "gcc")
