@@ -2,10 +2,10 @@
             "name": "@AKT_TARGET@",
             "type": "cppvsdbg",
             "request": "launch",
-            "program": "@CMAKE_INSTALL_PREFIX@/bin/@AKT_TARGET@",
+            "program": "@CMAKE_CURRENT_BINARY_DIR@/Debug/@AKT_TARGET@",
             "args": [],
             "stopAtEntry": false,
-            "cwd": "@CMAKE_SOURCE_DIR@/workdir",
+            "cwd": "@AKT_WORKDIR@",
             "environment": [],
             "console": "integratedTerminal"
         } 

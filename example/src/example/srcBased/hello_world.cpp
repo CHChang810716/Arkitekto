@@ -1,5 +1,4 @@
-#include <iostream>
-
+extern void say_hello();
 int main() {
-  std::cout << "hello world" << std::endl;
+  say_hello();
 }

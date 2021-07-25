@@ -1,0 +1,1 @@
+include(cmake/schemes/exe.cmake)

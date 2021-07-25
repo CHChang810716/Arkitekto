@@ -13,18 +13,20 @@ macro(akt_vscode_gen_launch)
             ${AKT_DIR}/vscode/launch.json.in 
         )
         akt_show_var_debug(__template)
+        if(NOT DEFINED AKT_WORKDIR)
+            set(AKT_WORKDIR ${CMAKE_CURRENT_BINARY_DIR}/akt_workdir)
+        endif()
+        if(NOT EXISTS "${AKT_WORKDIR}")
+            file(MAKE_DIRECTORY ${AKT_WORKDIR})
+        endif()
+        akt_show_var_debug(AKT_WORKDIR)
         configure_file(
             ${__template}
             ${CMAKE_SOURCE_DIR}/.vscode/launch.json
             @ONLY
         )
+        unset(AKT_WORKDIR)
         unset(__template)
-        set(__workdir ${CMAKE_SOURCE_DIR}/workdir)
-        akt_show_var_debug(__workdir)
-        if(NOT EXISTS "${__workdir}")
-            file(MAKE_DIRECTORY ${CMAKE_SOURCE_DIR}/workdir)
-        endif()
-        unset(__workdir)
     endif()
     file(REMOVE "${AKT_VSCODE_LAUNCH_TMP}")
 endmacro()
