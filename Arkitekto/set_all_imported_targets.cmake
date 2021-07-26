@@ -25,3 +25,6 @@ macro(akt_imported_targets_exclude)
     set(AKT_IMPORTED_TARGETS_EXCLUDE "${AKT_IMPORTED_TARGETS_EXCLUDE};${ARGN}")
   endif()
 endmacro()
+
+else()
+endif()
