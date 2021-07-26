@@ -1,11 +1,14 @@
 if(NOT DEFINED akt_src_based_add_targets_in_included)
 set(akt_src_based_add_targets_in_included)
+
 include(${CMAKE_CURRENT_LIST_DIR}/set_all_imported_targets.cmake)
+
 function(akt_src_based_add_targets_in_impl 
     first_level_dir 
     rel_cur_dir 
     default_scheme 
 )
+    akt_set_all_imported_targets()
     akt_show_var_debug(first_level_dir)
     akt_show_var_debug(rel_cur_dir)
     file(GLOB __akt_src_files 

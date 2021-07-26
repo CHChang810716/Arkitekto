@@ -1,7 +1,10 @@
 if(NOT DEFINED akt_cmake_based_add_targets_in_included)
 set(akt_cmake_based_add_targets_in_included)
+
 include(${CMAKE_CURRENT_LIST_DIR}/set_all_imported_targets.cmake)
+
 macro(akt_cmake_based_add_targets_in dir)
+    akt_set_all_imported_targets()
     if(NOT DEFINED AKT_SRC_ROOT_DIR)
         set(AKT_SRC_ROOT_DIR "${CMAKE_SOURCE_DIR}/src")
     endif()
