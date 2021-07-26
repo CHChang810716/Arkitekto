@@ -5,6 +5,7 @@ project(AktExample
 )
 
 include(${CMAKE_CURRENT_LIST_DIR}/../Arkitekto/all.cmake)
+include(cmake/package.cmake)
 include(cmake/src.cmake)
 include(cmake/install.cmake)
 include(cmake/ide.cmake)
