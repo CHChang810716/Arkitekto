@@ -17,6 +17,11 @@ function(akt_src_based_add_targets_in_impl
         ${first_level_dir}/${rel_cur_dir}/*.c 
         ${first_level_dir}/${rel_cur_dir}/*.cc 
     )
+    if(AKT_EXCLUDED_TARGETS_SRC)
+        foreach(__src ${AKT_EXCLUDED_TARGETS_SRC})
+            list(REMOVE_ITEM __akt_src_files ${__src})
+        endforeach()
+    endif()
     set(__akt_has_cmake)
     foreach(__akt_src_file ${__akt_src_files})
         akt_message_debug("current configure src: ${__akt_src_file}")
