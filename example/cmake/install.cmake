@@ -22,3 +22,6 @@ foreach(header ${headers})
     install(FILES ${header}
         DESTINATION ${inst_des})
 endforeach()
+unset(exe_targets CACHE)
+unset(test_targets CACHE)
+unset(lib_targets CACHE)

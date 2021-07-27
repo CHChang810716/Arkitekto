@@ -11,12 +11,15 @@ function(akt_src_based_add_targets_in_impl
     akt_set_all_imported_targets()
     akt_show_var_debug(first_level_dir)
     akt_show_var_debug(rel_cur_dir)
+    cmake_path(SET __abs_cur_dir NORMALIZE "${first_level_dir}/${rel_cur_dir}/")
     file(GLOB __akt_src_files 
-        ${first_level_dir}/${rel_cur_dir}/*.cpp 
-        ${first_level_dir}/${rel_cur_dir}/*.cxx 
-        ${first_level_dir}/${rel_cur_dir}/*.c 
-        ${first_level_dir}/${rel_cur_dir}/*.cc 
+        ${__abs_cur_dir}*.cpp 
+        ${__abs_cur_dir}*.cxx 
+        ${__abs_cur_dir}*.c 
+        ${__abs_cur_dir}*.cc 
     )
+    akt_show_var(AKT_EXCLUDED_TARGETS_SRC)
+    akt_show_var(__akt_src_files)
     if(AKT_EXCLUDED_TARGETS_SRC)
         foreach(__src ${AKT_EXCLUDED_TARGETS_SRC})
             list(REMOVE_ITEM __akt_src_files ${__src})
@@ -68,6 +71,7 @@ function(akt_src_based_add_targets_in_impl
         unset(__found)
     endforeach()
     unset(__akt_has_cmake)
+    unset(__abs_cur_dir)
 endfunction()
 macro(akt_src_based_add_targets_in 
     dir 
