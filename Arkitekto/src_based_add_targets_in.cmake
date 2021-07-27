@@ -18,8 +18,6 @@ function(akt_src_based_add_targets_in_impl
         ${__abs_cur_dir}*.c 
         ${__abs_cur_dir}*.cc 
     )
-    akt_show_var(AKT_EXCLUDED_TARGETS_SRC)
-    akt_show_var(__akt_src_files)
     if(AKT_EXCLUDED_TARGETS_SRC)
         foreach(__src ${AKT_EXCLUDED_TARGETS_SRC})
             list(REMOVE_ITEM __akt_src_files ${__src})
