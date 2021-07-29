@@ -8,7 +8,6 @@ function(akt_src_based_add_targets_in_impl
     rel_cur_dir 
     default_scheme 
 )
-    akt_set_all_imported_targets()
     akt_show_var_debug(first_level_dir)
     akt_show_var_debug(rel_cur_dir)
     cmake_path(SET __abs_cur_dir NORMALIZE "${first_level_dir}/${rel_cur_dir}/")
@@ -79,6 +78,7 @@ macro(akt_src_based_add_targets_in
         set(AKT_SRC_ROOT_DIR "${CMAKE_SOURCE_DIR}/src")
     endif()
     akt_get_debugger(AKT_DEBUGGER)
+    akt_set_all_imported_targets()
     akt_src_based_add_targets_in_impl(
         ${dir} 
         "." 

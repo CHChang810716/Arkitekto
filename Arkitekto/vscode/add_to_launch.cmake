@@ -23,10 +23,18 @@ macro(akt_vscode_add_to_launch target)
     endif()
     akt_show_var_debug(__template)
     akt_show_var_debug(AKT_VSCODE_LAUNCH_TASK_TMP)
+    if(NOT DEFINED AKT_WORKDIR)
+        set(AKT_WORKDIR "${CMAKE_CURRENT_BINARY_DIR}/akt_workdir")
+    endif()
+    if(NOT EXISTS "${AKT_WORKDIR}")
+        file(MAKE_DIRECTORY ${AKT_WORKDIR})
+    endif()
+    akt_show_var_debug(AKT_WORKDIR)
     configure_file(
         ${__template}
         ${AKT_VSCODE_LAUNCH_TASK_TMP}
     )
+    unset(AKT_WORKDIR)
     unset(__template)
     file(READ 
         ${AKT_VSCODE_LAUNCH_TASK_TMP} 
